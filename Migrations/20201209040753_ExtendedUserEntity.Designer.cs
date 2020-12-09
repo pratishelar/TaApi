@@ -3,14 +3,16 @@ using System;
 using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201209040753_ExtendedUserEntity")]
+    partial class ExtendedUserEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,9 +25,6 @@ namespace API.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Country")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Created")
@@ -53,6 +52,9 @@ namespace API.Migrations
                         .HasColumnType("BLOB");
 
                     b.Property<string>("UserName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("country")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -88,7 +90,7 @@ namespace API.Migrations
             modelBuilder.Entity("Entities.Photo", b =>
                 {
                     b.HasOne("Entities.AppUser", "AppUser")
-                        .WithMany("Photos")
+                        .WithMany("photos")
                         .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -98,7 +100,7 @@ namespace API.Migrations
 
             modelBuilder.Entity("Entities.AppUser", b =>
                 {
-                    b.Navigation("Photos");
+                    b.Navigation("photos");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,53 @@
+[
+    {
+        "UserName": "Lisa",
+        "Gender": "female",
+        "DateOfBirth": "1956-07-22",
+        "FirstName": "Lisa",
+        "LastName": "Snow",
+        "Created": "2020-06-24",
+        "LastActive": "2020-06-21",
+        "City": "Greenbush",
+        "Country": "Martinique",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/54.jpg",
+                "IsMain": true
+            }
+        ]
+    },
+    {
+        "UserName": "Karen",
+        "Gender": "female",
+        "DateOfBirth": "1995-10-12",
+        "FirstName": "Karen",
+        "LastName": "Stark",
+        "Created": "2019-12-09",
+        "LastActive": "2020-05-06",
+        "City": "Celeryville",
+        "Country": "Grenada",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/50.jpg",
+                "IsMain": true
+            }
+        ]
+    },
+    {
+        "UserName": "sam",
+        "Gender": "female",
+        "DateOfBirth": "1995-10-12",
+        "FirstName": "sam",
+        "LastName": "tark",
+        "Created": "2019-12-09",
+        "LastActive": "2020-05-06",
+        "City": "Celeryville",
+        "Country": "Grenada",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/50.jpg",
+                "IsMain": true
+            }
+        ]
+    }
+]
