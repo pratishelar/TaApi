@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http;
+
 namespace DTOs
 {
     public class PhotoDto
@@ -7,5 +9,6 @@ namespace DTOs
         public string Url { get; set; }
 
         public bool IsMain { get; set; }
+
     }
 }
