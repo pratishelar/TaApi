@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using DTOs;
 using Entities;
+using Helpers;
 
 namespace Interfaces
 {
@@ -15,7 +16,7 @@ namespace Interfaces
         Task<AppUser> GetUserByUsernameAsync(string username);
 
         // alternative method to get users
-        Task<IEnumerable<MemberDto>> GetMembersAsync();
+        Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams);
         Task<MemberDto> GetMemberAsync(string username);
     }
 }
